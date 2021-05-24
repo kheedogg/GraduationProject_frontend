@@ -175,20 +175,27 @@
     
 
     <div class="page-body">
+      
+      
       <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('emotion_prediction') }}">
+        <input type = "file" name = "file[]" multiple = "">
+        <button type = "submit">Submit</button>
+    </form>   
+    
+      <!-- <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('emotion_prediction') }}">
         <p><input type="file" id="file" accept="image/*" multiple class="btn btn-secondary" href="#"></a></p>
         <br><br>
     
-        <!--SHOW RESULT HERE-->
-        <!-- <p id="fp"></p>
-     -->
-        <!-- <input type="submit" value="Show Details" onclick="FileDetails()"
-           class="btn btn-secondary" href="#"></a> -->
+        SHOW RESULT HERE
+        <p id="fp"></p>
     
-        <!-- <input type = "file" name = "file[]" multiple = ""> -->
+        <input type="submit" value="Show Details" onclick="FileDetails()"
+           class="btn btn-secondary" href="#"></a>
+    
+        <input type = "file" name = "file[]" multiple = "">
 
           <button type ="submit" class="btn btn-secondary" href="#">Submit</button>
-      </form>
+      </form> -->
     </div>
 
 
