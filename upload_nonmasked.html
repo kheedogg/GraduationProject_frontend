@@ -182,11 +182,11 @@
     <p><input type="submit" value="Show Details" onclick="FileDetails()"
        class="btn btn-secondary" href="#"></a></p>
 
-       <div class="page-body">
-        <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('emotion_prediction') }}">
-            <input type = "file" name = "file[]" multiple = "">
-            <button type = "submit">Submit</button>
-        </form>
+    <div class="page-body">
+      <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('emotion_prediction') }}">
+          <input type = "file" name = "file[]" multiple = "">
+          <button type = "submit">Submit</button>
+      </form>
     </div>
 
 
