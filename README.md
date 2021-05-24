@@ -1,7 +1,9 @@
 # GraduationProject_frontend
 
 #### Main Page
-    front-end > carousel > page.html 
+    "index.html"
+    or
+    front-end > carousel > page.html(old-version)
 
 #### Content
     0518 update : Bootsreap example code 를 이용한 졸업과제 front-end page 생성
