@@ -173,19 +173,19 @@
 
   <div class="container marketing" style="text-align: center;">
     
-    <p><input type="file" id="file" accept="image/*" multiple class="btn btn-secondary" href="#"></a></p>
-    <br><br>
-
-    <!--SHOW RESULT HERE-->
-    <p id="fp"></p>
-
-    <p><input type="submit" value="Show Details" onclick="FileDetails()"
-       class="btn btn-secondary" href="#"></a></p>
 
     <div class="page-body">
       <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('emotion_prediction') }}">
-          <input type = "file" name = "file[]" multiple = "">
-          <button type = "submit">Submit</button>
+        <p><input type="file" id="file" accept="image/*" multiple class="btn btn-secondary" href="#"></a></p>
+        <br><br>
+    
+        <!--SHOW RESULT HERE-->
+        <p id="fp"></p>
+    
+        <p><input type="submit" value="Show Details" onclick="FileDetails()"
+           class="btn btn-secondary" href="#"></a></p>
+
+        <button type = "submit">Submit</button>
       </form>
     </div>
 
