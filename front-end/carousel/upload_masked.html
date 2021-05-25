@@ -69,6 +69,37 @@
   </nav>
 </header>
 
+<script>
+  function FileDetails() {
+
+      // GET THE FILE INPUT.
+      var fi = document.getElementById('file');
+
+      // VALIDATE OR CHECK IF ANY FILE IS SELECTED.
+      if (fi.files.length > 0) {
+
+          // THE TOTAL FILE COUNT.
+          document.getElementById('fp').innerHTML =
+              'Total Files: <b>' + fi.files.length + '</b></br >';
+
+          // RUN A LOOP TO CHECK EACH SELECTED FILE.
+          for (var i = 0; i <= fi.files.length - 1; i++) {
+
+              var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+              var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+
+              // SHOW THE EXTRACTED DETAILS OF THE FILE.
+              document.getElementById('fp').innerHTML =
+                  document.getElementById('fp').innerHTML + '<br /> ' +
+                      fname + ' (<b>' + fsize + '</b> bytes)';
+          }
+      }
+      else { 
+          alert('Please select a file.') 
+      }
+  }
+</script>
+
 <main>
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -136,10 +167,14 @@
 
   <div class="container marketing" style="text-align: center;">
     
-    <p><a class="btn btn-secondary" href="#">파일 선택</a></p>
+    <p><input class="btn btn-secondary" accept="image/*" type="file" id="file" multiple href="#"></a></p>
     <br><br>
 
-    <p><a class="btn btn-secondary" href="#">제출</a></p>
+    <!--SHOW RESULT HERE-->
+    <p id="fp"></p>
+
+    <p><input type="submit" value="Show Details" onclick="FileDetails()"
+       class="btn btn-secondary" href="#"></a></p>
 
 
 
