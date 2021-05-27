@@ -9,6 +9,19 @@
 //         win.loadFile('index.html'); 
 //     }
 
+function createAddItemWindow() {
+    //Create new window
+    addItemWindown = new BrowserWindow({
+        width: 300,
+        height: 200,
+        title: 'Add Item',
+
+        //The lines below solved the issue
+        webPreferences: {
+            nodeIntegration: true
+        }
+    })
+}
 
 
 
