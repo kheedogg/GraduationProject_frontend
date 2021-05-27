@@ -13,7 +13,7 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -70,6 +70,8 @@
 </header>
 
 <script>
+  var fname;
+  var fsize;
   function FileDetails() {
 
       // GET THE FILE INPUT.
@@ -85,8 +87,8 @@
           // RUN A LOOP TO CHECK EACH SELECTED FILE.
           for (var i = 0; i <= fi.files.length - 1; i++) {
 
-              var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
-              var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+              fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+              fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
 
               // SHOW THE EXTRACTED DETAILS OF THE FILE.
               document.getElementById('fp').innerHTML =
@@ -99,6 +101,8 @@
       }
   }
 </script>
+
+
 
 <main>
 
@@ -167,14 +171,30 @@
 
   <div class="container marketing" style="text-align: center;">
     
-    <p><input class="btn btn-secondary" accept="image/*" type="file" id="file" multiple href="#"></a></p>
-    <br><br>
 
-    <!--SHOW RESULT HERE-->
-    <p id="fp"></p>
+    <div class="page-body">
+      
+      
+      <!-- <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('emotion_prediction') }}">
+        <input type = "file" name = "file[]" multiple = "">
+        <button type = "submit">Submit</button>
+    </form>    -->
 
-    <p><input type="submit" value="Show Details" onclick="FileDetails()"
-       class="btn btn-secondary" href="#"></a></p>
+      <form method = "POST" enctype = "multipart/form-data" action = "{{ url_for('multi_upload_gan') }}">
+        <p><input type="file" id="file" name="file[]" accept="image/*" multiple = "" class="btn btn-secondary" href="#"></a></p>
+        <br><br>
+    
+        <!-- SHOW RESULT HERE -->
+        <p id="fp"></p>
+    
+        <input type="submit" value="Show Details" onclick="FileDetails()"
+           class="btn btn-secondary" href="#"></a><br><br>
+    
+        <!-- <input type = "file" name = "file[]" multiple = ""> -->
+
+          <button type ="submit" class="btn btn-secondary" href="#">Submit</button>
+      </form>
+    </div>
 
 
 

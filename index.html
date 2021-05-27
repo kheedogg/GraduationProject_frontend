@@ -7,11 +7,11 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
     <title>Carousel Template · Bootstrap v5.0</title>
-
+    <script src="fileNum.js"></script>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -33,7 +33,7 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body>
+
     
 <script>
   function FileDetails() {
@@ -63,7 +63,8 @@
     else { 
         alert('Please select a file.') 
     }
-    }
+
+  }
 </script>
 
 
@@ -169,19 +170,21 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
 
-      <div class="col-lg-4" onload="print()">
+      <div class="col-lg-4">
         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
         <span style='font-size:100px;'>&#128544;</span></br>
         <button style="background-color: #ffffff; border: #ffffff;
         color:darkgray; font-size: 35px;">Angry</button>
-        <!-- <h2>Angry</h2> -->
+        
+        <!-- 변수 값 받아오기 -->
+        <!-- <script language="javascript">
+          temp = location.href.split("?");
+          data = temp[1];
+          document.write(data + " ");
+        </script> -->
+
         <p>
-
-
-
-          <b id="len1'"></b>
-          <script src="print1.js"></script>
-          /300</p>
+          ?/300</p>
         
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -190,7 +193,7 @@
         <button style="background-color: #ffffff; border: #ffffff;
         color:darkgray; font-size: 35px;">Happy</button>
         <!-- <h2>Happy</h2> -->
-        <p>___/300</p>
+        <p>?/300</p>
         
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -199,7 +202,7 @@
         <button style="background-color: #ffffff; border: #ffffff;
         color:darkgray; font-size: 35px;">Neutral</button>
         <!-- <h2>Neutral</h2> -->
-        <p>___/300</p>
+        <p>?/300</p>
         
       </div><!-- /.col-lg-4 -->
       

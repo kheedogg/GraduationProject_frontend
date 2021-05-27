@@ -13,7 +13,7 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -74,6 +74,8 @@
 </header>
 
 <script>
+  var fname;
+  var fsize;
   function FileDetails() {
 
       // GET THE FILE INPUT.
@@ -89,8 +91,8 @@
           // RUN A LOOP TO CHECK EACH SELECTED FILE.
           for (var i = 0; i <= fi.files.length - 1; i++) {
 
-              var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
-              var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+              fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+              fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
 
               // SHOW THE EXTRACTED DETAILS OF THE FILE.
               document.getElementById('fp').innerHTML =
@@ -102,7 +104,11 @@
           alert('Please select a file.') 
       }
   }
-</script>
+
+  function Send(){
+    location.href = "hello2.html?" + fsize;
+  }
+  </script>
 
 
 
@@ -194,7 +200,11 @@
     
         <!-- <input type = "file" name = "file[]" multiple = ""> -->
 
-          <button type ="submit" class="btn btn-secondary" href="#">Submit</button>
+
+        <input type="submit" value="Submit" onclick="Send()"
+        class="btn btn-secondary" href="hello2.html">
+
+          <!-- <button type ="submit" class="btn btn-secondary" href="#">Submit</button> -->
       </form>
     </div>
 
