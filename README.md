@@ -12,5 +12,5 @@
     0524 update : input multiple images 완료
     0527 update : button link setting 완료
                   "Uncaught ReferenceError: require is not defined" error로 인하여 폴더 내 파일 개수 출력 안됨
-    0531 update : flask Python을 이용하여 파일 개수 읽어오기 성공             --> 2)
+    0531 update : flask Python을 이용하여 파일 개수 읽어오기 성공              --> 2)
                   Ready!와 Not Ready! 상태 동적으로 변화할 수 있도록 설정 완료 --> 2)
